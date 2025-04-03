@@ -1326,6 +1326,8 @@ export class BarCardEditor extends LitElement implements LovelaceCardEditor {
   }
 }
 
+declare let window: any;
+
 window.customCards = window.customCards || [];
 window.customCards.push({
   type: 'bar-card',
