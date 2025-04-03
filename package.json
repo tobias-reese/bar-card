@@ -16,9 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "custom-card-helpers": "^1.6.5",
-    "home-assistant-js-websocket": "^4.4.0",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2",
+    "home-assistant-js-websocket": "^4.5.0",
+    "lit-element": "^2.5.1",
+    "lit-html": "^1.4.1",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
@@ -29,20 +29,20 @@
     "@types/lodash": "^4.14.158",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^1.18.2",
-    "rollup": "^1.26.0",
-    "rollup-plugin-babel": "^4.3.3",
+    "prettier": "^1.19.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.0.3",
-    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-terser": "^5.3.1",
     "rollup-plugin-typescript2": "^0.24.3",
-    "rollup-plugin-uglify": "^6.0.3",
+    "rollup-plugin-uglify": "^6.0.4",
     "typescript": "^3.9.7"
   },
   "scripts": {
@@ -50,5 +50,6 @@
     "build": "npm run lint && npm run rollup",
     "lint": "eslint src/*.ts",
     "rollup": "rollup -c"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
