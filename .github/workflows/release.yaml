@@ -11,8 +11,13 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - name: Create a release build
-        uses: ./.github/workflows/build.yaml
+      - name: Wait for build to succeed
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'Build the project'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
