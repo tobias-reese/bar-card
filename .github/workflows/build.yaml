@@ -45,4 +45,3 @@ jobs:
           asset_name: bar-card.js
           asset_content_type: application/javascript
         if: startsWith(github.event.ref, 'refs/tags/v')
-        if: startsWith(github.event.ref, 'refs/tags/v')
