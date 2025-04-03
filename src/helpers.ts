@@ -36,9 +36,9 @@ export function mapRange(num: number, in_min: number, in_max: number, out_min: n
 }
 
 export function getMaxMinBasedOnType(hass: HomeAssistant | undefined, value: number | string): number {
-  if (typeof value === "number") {
+  if (typeof value === 'number') {
     return value;
-  } 
+  }
   if (hass === undefined) {
     return 0;
   }
@@ -47,8 +47,8 @@ export function getMaxMinBasedOnType(hass: HomeAssistant | undefined, value: num
     if (isNaN(parsedValue)) {
       return 0;
     }
-    return parsedValue
-  } 
+    return parsedValue;
+  }
   return 0;
 }
 
