@@ -35,6 +35,23 @@ export function mapRange(num: number, in_min: number, in_max: number, out_min: n
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 }
 
+export function getMaxMinBasedOnType(hass: HomeAssistant | undefined, value: number | string): number {
+  if (typeof value === "number") {
+    return value;
+  } 
+  if (hass === undefined) {
+    return 0;
+  }
+  if (hass.states[value]) {
+    const parsedValue = parseInt(hass.states[value].state);
+    if (isNaN(parsedValue)) {
+      return 0;
+    }
+    return parsedValue
+  } 
+  return 0;
+}
+
 // Check if config or Entity changed
 export function hasConfigOrEntitiesChanged(element: any, changedProps: PropertyValues, forceUpdate: boolean): boolean {
   if (changedProps.has('config') || forceUpdate) {
